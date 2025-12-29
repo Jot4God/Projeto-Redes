@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 232
     height: 924
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -249,8 +249,8 @@ MonoBehaviour:
     y: 0
     width: 493
     height: 924
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -277,8 +277,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "UnityEditor.MainToolbarWindow\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1
-    y: 51
+    x: 0
+    y: 0
     width: 1918
     height: 36
   m_SerializedDataModeController:
@@ -557,8 +557,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 233
-    y: 87
+    x: 1
+    y: 24
     width: 1191
     height: 657
   m_SerializedDataModeController:
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 4.4899695e-11, y: 0.00000009282247, z: -0.000000003650702, w: 1}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
     m_Target: 205.34148
     speed: 2
@@ -1301,7 +1301,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.00048330618, y: 0.9991532, z: -0.03929663, w: 0.012291322}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 12}
@@ -1338,8 +1338,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1
-    y: 87
+    x: 0
+    y: 24
     width: 231
     height: 898
   m_SerializedDataModeController:
@@ -1358,10 +1358,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: -30758
+      m_SelectedIDs: []
       m_LastClickedID:
-        m_Data: -30758
+        m_Data: 0
       m_ExpandedIDs:
       - m_Data: -32600
       - m_Data: -29784
@@ -1579,8 +1578,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Console\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 233
-    y: 770
+    x: 1
+    y: 707
     width: 1191
     height: 215
   m_SerializedDataModeController:
@@ -1708,10 +1707,7 @@ MonoBehaviour:
     - m_Data: 54358
     m_LastClickedID:
       m_Data: 54358
-    m_ExpandedIDs:
-    - m_Data: 0
-    - m_Data: 54356
-    - m_Data: 1000000000
+    m_ExpandedIDs: []
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1831,7 +1827,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1426
-    y: 87
+    y: 24
     width: 492
     height: 898
   m_SerializedDataModeController:

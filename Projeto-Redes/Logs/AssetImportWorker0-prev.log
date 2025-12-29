@@ -1,0 +1,974 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/respin/6000.3.1f1-f56f53296c2c' branch; Version is '6000.3.1f1 (37142da19a94) revision 3609645'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-User" at "2025-12-29T17:13:28.1467764Z"
+OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'pt' Physical Memory: 32361 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2025-12-29T17:13:28Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/User/My project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64725
+-job-worker-count
+5
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Users/User/My project
+C:/Users/User/My project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [11480]  Target information:
+
+Player connection [11480]  * "[IP] 193.167.1.28 [Port] 0 [Flags] 2 [Guid] 4183417496 [EditorId] 4183417496 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-9BODUND) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [11480] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [11480] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 1.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.1f1 (37142da19a94)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/User/My project/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 5060 (ID=0x2d05)
+    Vendor:   NVIDIA
+    VRAM:     7895 MB
+    Driver:   32.0.15.9159
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001381 seconds.
+- Loaded All Assemblies, in  0.318 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.359 seconds
+Domain Reload Profiling: 675ms
+	BeginReloadAssembly (105ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (131ms)
+		LoadAssemblies (102ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (128ms)
+			TypeCache.Refresh (127ms)
+				TypeCache.ScanAssembly (113ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (360ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (321ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (36ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (66ms)
+			ProcessInitializeOnLoadAttributes (141ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              c1b86c31428447598df4441ee0a06da5
+  Correlation Id:          91f3b33a9d7cdfa0c1d51c9ef816a45d
+  External correlation Id: 8832624126378767031
+  Machine Id:              1JbwOrdAksQwViz4fekLYouCT3M=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-User" (connect: 0.00s, validation: 0.00s, handshake: 1.73s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-User-notifications" at "2025-12-29T17:13:29.8778178Z"
+[Licensing::Module] Licensing Background thread has ended after 1.73s
+[Licensing::Module] Licensing is initialized (took 0.29s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 6872734536027-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+- Loaded All Assemblies, in  0.923 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.621 seconds
+Domain Reload Profiling: 1539ms
+	BeginReloadAssembly (432ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (415ms)
+		LoadAssemblies (279ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (211ms)
+			TypeCache.Refresh (158ms)
+				TypeCache.ScanAssembly (146ms)
+			BuildScriptInfoCaches (41ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (621ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (464ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (279ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 1.05 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6182 unused Assets / (4.9 MB). Loaded Objects now: 6980.
+Memory consumption went from 144.7 MB to 139.8 MB.
+Total: 11.535300 ms (FindLiveObjects: 1.225300 ms CreateObjectMapping: 1.238500 ms MarkObjects: 6.070900 ms  DeleteObjects: 2.999400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 10439.496522 seconds.
+  path: Assets/Readme.asset
+  artifactKey: Guid(8105016687592461f977c054a80ce2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Readme.asset using Guid(8105016687592461f977c054a80ce2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '50ea5ad2cda8720781b90d71f311d8d1') in 0.019592 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.682109 seconds.
+  path: Assets/Readme.asset
+  artifactKey: Guid(8105016687592461f977c054a80ce2f2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Readme.asset using Guid(8105016687592461f977c054a80ce2f2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2619375c2612779e305b01e61a1c5c30') in 0.0759062 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/TutorialInfo/Layout.wlt
+  artifactKey: Guid(eabc9546105bf4accac1fd62a63e88e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TutorialInfo/Layout.wlt using Guid(eabc9546105bf4accac1fd62a63e88e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e4519b89b72dad333a16c886e74e971a') in 0.0096256 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Settings/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(18dc0cd2c080841dea60987a38ce93fa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Settings/UniversalRenderPipelineGlobalSettings.asset using Guid(18dc0cd2c080841dea60987a38ce93fa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bf2fa921699d670f0afa225f832478ea') in 0.0731852 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/TutorialInfo/Scripts/Readme.cs
+  artifactKey: Guid(fcf7219bab7fe46a1ad266029b2fee19) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TutorialInfo/Scripts/Readme.cs using Guid(fcf7219bab7fe46a1ad266029b2fee19) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6c98b154ec2737505d697e29146981d1') in 0.01363 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Settings/PC_RPAsset.asset
+  artifactKey: Guid(4b83569d67af61e458304325a23e5dfd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Settings/PC_RPAsset.asset using Guid(4b83569d67af61e458304325a23e5dfd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cbbdb2681ff8ea9d1a26c5fabb9d2ddb') in 0.0409869 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 372.386757 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(1c082c075fb98fb4183b5e7f3f1a1367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lobby.unity using Guid(1c082c075fb98fb4183b5e7f3f1a1367) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a0934333fb91db2275c1e7cb2927991e') in 0.000541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.597415 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(1c082c075fb98fb4183b5e7f3f1a1367) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Lobby.unity using Guid(1c082c075fb98fb4183b5e7f3f1a1367) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ec115f6d4b0b222ca83890ddea6c3e5a') in 0.0086857 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.010475 seconds.
+  path: Assets/Scenes/Game.unity
+  artifactKey: Guid(9210e53cdf51e0542a7c179350411323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game.unity using Guid(9210e53cdf51e0542a7c179350411323) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e14358cbb5d367fcd26f6bba45f0411c') in 0.0004622 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.051530 seconds.
+  path: Assets/Scenes/Game.unity
+  artifactKey: Guid(9210e53cdf51e0542a7c179350411323) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Game.unity using Guid(9210e53cdf51e0542a7c179350411323) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6ae49c5fdc307f6e9b45ed6e3d59b22e') in 0.0108138 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 247.957195 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/SampleScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6aba374197d38e0cbd2945045894e915') in 0.0100636 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 161.177150 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Lobby.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2efb70a5e720c2ef46175db97fd760d3') in 0.0094565 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.739043 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lobby.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7019148a9cf3ad028a9ddd18269d8e18') in 0.0004635 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.233844 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lobby.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fda3278df54072d998f5b7848d267357') in 0.0005231 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.654652 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Lobby.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4028235c17b65d1b7a1904308f6be4bc') in 0.0098937 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 89.498355 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c391582d739b6e62a5220f35cbb167ac') in 0.0004439 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.696022 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(45412a7a5c4361e4e8cd3c4970a633ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(45412a7a5c4361e4e8cd3c4970a633ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3afa789e86b634378b3ba36da416c1c4') in 0.0004798 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.948989 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(45412a7a5c4361e4e8cd3c4970a633ce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts using Guid(45412a7a5c4361e4e8cd3c4970a633ce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd3316dc46d34c3b7b0048b190db1b586') in 0.0100815 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6174 unused Assets / (3.5 MB). Loaded Objects now: 6984.
+Memory consumption went from 143.8 MB to 140.3 MB.
+Total: 7.949700 ms (FindLiveObjects: 0.614600 ms CreateObjectMapping: 0.223600 ms MarkObjects: 5.620100 ms  DeleteObjects: 1.490400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 30.674783 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8754bce82600dcc7e9014d6fc9e2fb1e') in 0.0050362 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.681327 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '77f1337e6b1d46c5f4f0ab862064a8cf') in 0.0101155 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  0.639 seconds
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.700 seconds
+Domain Reload Profiling: 1337ms
+	BeginReloadAssembly (185ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (381ms)
+		LoadAssemblies (295ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (160ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (138ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (701ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (545ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (146ms)
+			ProcessInitializeOnLoadAttributes (322ms)
+			ProcessInitializeOnLoadMethodAttributes (64ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6179 unused Assets / (4.6 MB). Loaded Objects now: 7000.
+Memory consumption went from 149.6 MB to 145.0 MB.
+Total: 8.883700 ms (FindLiveObjects: 0.821300 ms CreateObjectMapping: 0.700000 ms MarkObjects: 5.124500 ms  DeleteObjects: 2.237100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.170527 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0069718 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004539 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0005042 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004746 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.000535 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004836 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004932 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004325 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.00047 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004387 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0005048 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0006503 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0005376 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004702 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0005214 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004926 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004717 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004872 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004626 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004401 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004003 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004799 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004967 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0005948 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.000551 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004907 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0008063 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004799 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0005172 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0004943 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0005118 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0005157 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.000427 seconds
+Import Error Code:(4)
+Message: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+  ERROR: Build asset version error: assets/scripts/lobbyui.cs in SourceAssetDB has modification time of '2025-12-29T17:29:05.4722543Z' while content on disk has modification time of '2025-12-29T17:29:11.4741758Z'
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '723f0f32d36a33434c7265817523234c') in 0.0004661 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6173 unused Assets / (3.4 MB). Loaded Objects now: 7000.
+Memory consumption went from 149.8 MB to 146.4 MB.
+Total: 5.786600 ms (FindLiveObjects: 0.566700 ms CreateObjectMapping: 0.281300 ms MarkObjects: 3.687200 ms  DeleteObjects: 1.250900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.074355 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '256b1db803553682eb67dcb56ec2446d') in 0.0045883 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6173 unused Assets / (4.7 MB). Loaded Objects now: 7000.
+Memory consumption went from 149.8 MB to 145.1 MB.
+Total: 8.198900 ms (FindLiveObjects: 0.604300 ms CreateObjectMapping: 0.257400 ms MarkObjects: 5.168200 ms  DeleteObjects: 2.168200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 10.861404 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '66faf0ccf2c024835d7ae7b1e951d02b') in 0.0053169 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.923947 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lobby.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd1732bdbc9576c5ed5ae14ac9023c159') in 0.0005386 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.971385 seconds.
+  path: Assets/Scripts/LobbyUI.cs
+  artifactKey: Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/LobbyUI.cs using Guid(1fb2d89fad0166546bd1b4b8daf3b723) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '048c63bcee2d1c5feec65943ec3960b8') in 0.06058 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.598320 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lobby.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '400842adc341e8367c624a11f3336b7b') in 0.0005232 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.957174 seconds.
+  path: Assets/Scenes/Lobby.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scenes/Lobby.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5bd15aabaec75f1630449a685c2bf562') in 0.0102351 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  0.629 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.595 seconds
+Domain Reload Profiling: 1220ms
+	BeginReloadAssembly (194ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (349ms)
+		LoadAssemblies (295ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (137ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (119ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (596ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (463ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (143ms)
+			ProcessInitializeOnLoadAttributes (258ms)
+			ProcessInitializeOnLoadMethodAttributes (51ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6179 unused Assets / (3.4 MB). Loaded Objects now: 7003.
+Memory consumption went from 149.4 MB to 146.0 MB.
+Total: 8.319900 ms (FindLiveObjects: 0.855100 ms CreateObjectMapping: 0.440500 ms MarkObjects: 5.507600 ms  DeleteObjects: 1.516100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  0.495 seconds
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.482 seconds
+Domain Reload Profiling: 976ms
+	BeginReloadAssembly (156ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (278ms)
+		LoadAssemblies (230ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (115ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (97ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (482ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (371ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (215ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 30 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6227 unused Assets / (5.1 MB). Loaded Objects now: 7040.
+Memory consumption went from 154.7 MB to 149.6 MB.
+Total: 6.615500 ms (FindLiveObjects: 0.566200 ms CreateObjectMapping: 0.243400 ms MarkObjects: 3.985200 ms  DeleteObjects: 1.820300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
