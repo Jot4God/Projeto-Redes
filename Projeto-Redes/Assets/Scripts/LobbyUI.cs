@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LobbyUI : MonoBehaviour
 {
@@ -12,25 +13,61 @@ public class LobbyUI : MonoBehaviour
     public TMP_InputField nicknameInput;
 
     [Header("Lobby UI")]
-    public TMP_InputField roomCodeInput;
+    public TMP_InputField roomCodeInput; 
     public TMP_Text statusText;
     public TMP_Text playersText;
 
-    // Estado offline (simulação) — depois substituis pelo estado real vindo do servidor
+    [Header("Lobby Buttons")]
+    public GameObject startGameButton;
+
+    [Header("LAN Networking (TCP)")]
+    public RpsLanServer lanServer;
+    public RpsLanClient lanClient;
+
+    [Header("Scene")]
+    public string gameSceneName = "Game";
+
     private string _nickname;
-    private string _currentRoomCode;
     private bool _inLobby;
+
+    private Action _startGameAction;
+    private bool _networkPinned;
 
     private void Start()
     {
         ShowMainMenu();
         SetStatus("Pronto.");
         SetPlayers("-");
+
+        _startGameAction = () => MainThreadDispatcher.Post(() =>
+        {
+            SetStatus("A entrar no jogo...");
+            SceneManager.LoadScene(gameSceneName);
+        });
+
+        if (lanServer != null)
+        {
+            lanServer.OnStatus += (msg) => MainThreadDispatcher.Post(() => SetStatus(msg));
+            lanServer.OnPlayers += (p) => MainThreadDispatcher.Post(() => UpdatePlayersUI(p));
+            lanServer.OnStartGame += _startGameAction;
+        }
+
+        if (lanClient != null)
+        {
+            lanClient.OnStatus += (msg) => MainThreadDispatcher.Post(() => SetStatus(msg));
+            lanClient.OnPlayers += (p) => MainThreadDispatcher.Post(() => UpdatePlayersUI(p));
+            lanClient.OnStartGame += _startGameAction;
+        }
+
+        if (startGameButton) startGameButton.SetActive(false);
     }
 
-    // -------------------------
-    // Navegação de Panels
-    // -------------------------
+    private void OnDestroy()
+    {
+        if (lanServer != null) lanServer.OnStartGame -= _startGameAction;
+        if (lanClient != null) lanClient.OnStartGame -= _startGameAction;
+    }
+
     private void ShowMainMenu()
     {
         _inLobby = false;
@@ -45,9 +82,6 @@ public class LobbyUI : MonoBehaviour
         if (panelLobby) panelLobby.SetActive(true);
     }
 
-    // -------------------------
-    // BOTÃO: Jogar
-    // -------------------------
     public void OnClickPlay()
     {
         _nickname = nicknameInput != null ? nicknameInput.text.Trim() : "";
@@ -58,62 +92,122 @@ public class LobbyUI : MonoBehaviour
         }
 
         ShowLobby();
-        SetStatus($"Bem-vindo, {_nickname}. Cria uma sala ou entra com um código.");
+        SetStatus($"Bem-vindo, {_nickname}. Cria uma sala (Host) ou entra com o IP do Host.");
         SetPlayers("Aguardando...");
+        if (startGameButton) startGameButton.SetActive(false);
     }
 
-    // -------------------------
-    // BOTÃO: Voltar
-    // -------------------------
     public void OnClickBack()
     {
-        // No futuro, aqui também envias "leave_room" no TCP
-        _currentRoomCode = null;
+        if (lanClient != null) lanClient.Disconnect();
+        if (lanServer != null) lanServer.StopHost();
+
         ShowMainMenu();
         SetStatus("Voltaste ao menu.");
         SetPlayers("-");
+        if (startGameButton) startGameButton.SetActive(false);
     }
 
-    // -------------------------
-    // BOTÃO: Criar Sala (offline simulado)
-    // -------------------------
     public void OnClickCreateRoom()
     {
         if (!_inLobby) return;
+        if (lanServer == null)
+        {
+            SetStatus("RpsLanServer não está ligado no Inspector.");
+            return;
+        }
 
-        // FUTURO TCP: enviar {"type":"create_room"}
-        // POR AGORA: simulação
-        _currentRoomCode = UnityEngine.Random.Range(10000, 99999).ToString();
-        if (roomCodeInput) roomCodeInput.text = _currentRoomCode;
+        PinNetworkAcrossScenes();
 
-        SetStatus($"Sala criada: {_currentRoomCode}. Partilha este código com o outro jogador.");
-        SetPlayers($"[HOST] {_nickname} - NOT READY\n(à espera do 2º jogador)");
+        lanServer.StartHost(_nickname);
+
+        string ip = lanServer.GetLocalLanIp();
+        if (roomCodeInput) roomCodeInput.text = ip;
+
+        SetStatus($"Host ativo. Partilha este IP: {ip}");
+        UpdatePlayersUI(new[] { _nickname, (string)null });
+
+        // Mostra quando o cliente entrar (UpdatePlayersUI também controla)
+        if (startGameButton) startGameButton.SetActive(false);
     }
 
-    // -------------------------
-    // BOTÃO: Entrar (offline simulado)
-    // -------------------------
     public void OnClickJoinRoom()
     {
         if (!_inLobby) return;
 
-        string code = roomCodeInput != null ? roomCodeInput.text.Trim() : "";
-        if (string.IsNullOrWhiteSpace(code))
+        string ip = roomCodeInput != null ? roomCodeInput.text.Trim() : "";
+        if (string.IsNullOrWhiteSpace(ip))
         {
-            SetStatus("Escreve o código da sala para entrar.");
+            SetStatus("Escreve o IP do Host para entrar (ex: 192.168.1.23).");
             return;
         }
 
-        // FUTURO TCP: enviar {"type":"join_room","code":"..."}
-        // POR AGORA: simulação
-        _currentRoomCode = code;
-        SetStatus($"Tentativa de entrar na sala: {code} (simulado).");
-        SetPlayers($"{_nickname} - NOT READY\n(sem rede ainda)");
+        if (lanClient == null)
+        {
+            SetStatus("RpsLanClient não está ligado no Inspector.");
+            return;
+        }
+
+        PinNetworkAcrossScenes();
+
+        SetStatus("A ligar ao Host...");
+        lanClient.Connect(ip, _nickname);
+
+        if (startGameButton) startGameButton.SetActive(false);
     }
 
-    // -------------------------
-    // Helpers UI
-    // -------------------------
+    public void OnClickStartGame()
+    {
+        if (lanServer == null || !lanServer.IsHosting)
+        {
+            SetStatus("Só o Host pode iniciar o jogo.");
+            return;
+        }
+
+        if (!lanServer.HasClient)
+        {
+            SetStatus("Ainda falta o 2º jogador ligar.");
+            return;
+        }
+
+        lanServer.StartGame();
+    }
+
+    private void UpdatePlayersUI(string[] p)
+    {
+        string host = (p != null && p.Length > 0) ? p[0] : "-";
+        string client = (p != null && p.Length > 1) ? p[1] : null;
+
+        if (string.IsNullOrWhiteSpace(host)) host = "-";
+
+        if (string.IsNullOrWhiteSpace(client))
+            SetPlayers($"[HOST] {host}\n(à espera do 2º jogador)");
+        else
+            SetPlayers($"[HOST] {host}\n[CLIENT] {client}");
+
+        // ✅ Botão Start: só no Host e só quando já há cliente
+        if (startGameButton != null)
+        {
+            bool show = lanServer != null && lanServer.IsHosting && lanServer.HasClient;
+            startGameButton.SetActive(show);
+        }
+    }
+
+    private void PinNetworkAcrossScenes()
+    {
+        if (_networkPinned) return;
+
+        GameObject networkRoot = null;
+        if (lanServer != null) networkRoot = lanServer.gameObject;
+        else if (lanClient != null) networkRoot = lanClient.gameObject;
+
+        if (networkRoot != null)
+        {
+            DontDestroyOnLoad(networkRoot);
+            _networkPinned = true;
+        }
+    }
+
     private void SetStatus(string msg)
     {
         if (statusText) statusText.text = msg;

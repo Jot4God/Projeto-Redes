@@ -1,133 +1,166 @@
-using UnityEngine;
+using System;
+using System.Collections.Concurrent;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RPSGameUI : MonoBehaviour
 {
     [Header("UI")]
     public TMP_Text resultText;
-    public TMP_Text roundText; // Novo: mostra a ronda atual
+    public TMP_Text roundText;
 
-    private string player1Choice = "";
-    private string player2Choice = "";
-    private bool player1Ready = false;
-    private bool player2Ready = false;
-    private bool isPlayer1Turn = true;
+    [Header("Buttons Root (optional)")]
+    public GameObject buttonsRoot; // parent dos 3 botões para bloquear/desbloquear
 
-    private int player1Score = 0;
-    private int player2Score = 0;
-    private int currentRound = 1;
-    private int totalRounds = 5;
+    [Header("Scene Names")]
+    public string lobbySceneName = "LobbyScene";
 
-    // -------------------------
-    // Escolha de cada jogador
-    // -------------------------
+    private RpsLanServer _server;
+    private RpsLanClient _client;
+
+    private bool _isHost;
+    private bool _pickedThisRound;
+
+    // ✅ Recebe resultados de threads de rede sem mexer na UI diretamente
+    private readonly ConcurrentQueue<string> _pendingResults = new();
+
+    private void Start()
+    {
+        _server = FindFirstObjectByType<RpsLanServer>();
+        _client = FindFirstObjectByType<RpsLanClient>();
+
+        _isHost = (_server != null && _server.IsHosting);
+
+        if (_isHost)
+        {
+            _server.OnResultLine += EnqueueResult;
+            SetText($"És HOST ({_server.HostNick}). Escolhe uma opção.", "Ronda 1");
+        }
+        else
+        {
+            if (_client == null || !_client.IsConnected)
+            {
+                SetText("Não estás ligado à rede. Volta ao lobby.", "-");
+                EnableChoices(false);
+                return;
+            }
+
+            _client.OnResultLine += EnqueueResult;
+            SetText($"És CLIENT ({_client.MyNick}). Escolhe uma opção.", "Ronda 1");
+        }
+
+        _pickedThisRound = false;
+        EnableChoices(true);
+    }
+
+    private void OnDestroy()
+    {
+        if (_server != null) _server.OnResultLine -= EnqueueResult;
+        if (_client != null) _client.OnResultLine -= EnqueueResult;
+    }
+
+    private void Update()
+    {
+        // ✅ Processa resultados na main thread
+        while (_pendingResults.TryDequeue(out var line))
+        {
+            ApplyResultLine(line);
+        }
+    }
+
+    private void EnqueueResult(string line)
+    {
+        if (!string.IsNullOrWhiteSpace(line))
+            _pendingResults.Enqueue(line);
+    }
+
     public void Choose(string choice)
     {
-        if (currentRound > totalRounds)
-            return; // jogo acabou
+        if (_pickedThisRound) return;
 
-        if (isPlayer1Turn && !player1Ready)
-        {
-            player1Choice = choice;
-            player1Ready = true;
-            isPlayer1Turn = false;
-            resultText.text = "Jogador 2, escolhe a tua opção!";
-        }
-        else if (!isPlayer1Turn && !player2Ready)
-        {
-            player2Choice = choice;
-            player2Ready = true;
-            CheckBothChoices();
-        }
-    }
+        _pickedThisRound = true;
+        EnableChoices(false);
 
-    // -------------------------
-    // Calcula resultado da ronda
-    // -------------------------
-    private void CheckBothChoices()
-    {
-        string result;
-
-        if (player1Choice == player2Choice)
-            result = "Empate!";
-        else if (
-            (player1Choice == "Pedra" && player2Choice == "Tesoura") ||
-            (player1Choice == "Tesoura" && player2Choice == "Papel") ||
-            (player1Choice == "Papel" && player2Choice == "Pedra")
-        )
+        if (_isHost)
         {
-            result = "Jogador 1 ganha a ronda!";
-            player1Score++;
+            _server.SubmitHostMove(choice);
+            resultText.text = $"Escolheste {choice}. À espera do CLIENT...";
         }
         else
         {
-            result = "Jogador 2 ganha a ronda!";
-            player2Score++;
+            _client.SubmitMove(choice);
+            resultText.text = $"Escolheste {choice}. À espera do HOST...";
+        }
+    }
+
+    // RESULT|round|total|hostNick|clientNick|hostMove|clientMove|winner|hostScore|clientScore|gameOver
+    private void ApplyResultLine(string line)
+    {
+        var parts = line.Split('|');
+        if (parts.Length < 11) return;
+
+        int round = int.Parse(parts[1]);
+        int total = int.Parse(parts[2]);
+
+        string hostNick = parts[3];
+        string clientNick = parts[4];
+        string hostMove = parts[5];
+        string clientMove = parts[6];
+        string winner = parts[7];
+        int hostScore = int.Parse(parts[8]);
+        int clientScore = int.Parse(parts[9]);
+        bool gameOver = parts[10] == "1";
+
+        string winnerText =
+            winner == "DRAW" ? "Empate!" :
+            winner == "HOST" ? $"{hostNick} ganha a ronda!" :
+            $"{clientNick} ganha a ronda!";
+
+        if (roundText) roundText.text = $"Ronda {round}/{total}";
+
+        if (resultText)
+        {
+            resultText.text =
+                $"Ronda {round}/{total}\n\n" +
+                $"{hostNick}: {hostMove}\n" +
+                $"{clientNick}: {clientMove}\n\n" +
+                $"{winnerText}\n\n" +
+                $"Pontuação: {hostScore} - {clientScore}";
         }
 
-        resultText.text =
-            $"Ronda {currentRound}/{totalRounds}\n" +
-            $"Jogador 1: {player1Choice}\n" +
-            $"Jogador 2: {player2Choice}\n\n" +
-            result +
-            $"\n\nPontuação: {player1Score} - {player2Score}";
-
-        // Próxima ronda ou fim do jogo
-        currentRound++;
-        if (currentRound > totalRounds)
+        if (gameOver)
         {
-            ShowFinalWinner();
+            string final =
+                hostScore > clientScore ? $"{hostNick} vence o jogo!" :
+                clientScore > hostScore ? $"{clientNick} vence o jogo!" :
+                "Empate final!";
+
+            if (resultText) resultText.text += $"\n\nFIM DO JOGO!\n{final}";
+            EnableChoices(false);
         }
         else
         {
-            ResetRoundForNext();
+            _pickedThisRound = false;
+            EnableChoices(true);
+            if (resultText) resultText.text += "\n\nEscolhe uma opção para a próxima ronda.";
         }
     }
 
-    // -------------------------
-    // Reset para próxima ronda
-    // -------------------------
-    private void ResetRoundForNext()
-    {
-        player1Choice = "";
-        player2Choice = "";
-        player1Ready = false;
-        player2Ready = false;
-        isPlayer1Turn = true;
-        roundText.text = $"Ronda {currentRound}/{totalRounds}";
-        resultText.text += "\n\nJogador 1, escolhe a tua opção!";
-    }
-
-    // -------------------------
-    // Mostra vencedor final
-    // -------------------------
-    private void ShowFinalWinner()
-    {
-        string winner;
-        if (player1Score > player2Score) winner = "Jogador 1 vence o jogo!";
-        else if (player2Score > player1Score) winner = "Jogador 2 vence o jogo!";
-        else winner = "Empate!";
-
-        resultText.text += $"\n\nFIM DO JOGO!\n{winner}";
-    }
-
-    // -------------------------
-    // Voltar ao Lobby
-    // -------------------------
     public void BackToLobby()
     {
-        SceneManager.LoadScene("LobbyScene");
+        SceneManager.LoadScene(lobbySceneName);
     }
 
-    // -------------------------
-    // Reset manual do jogo
-    // -------------------------
-    public void ResetGame()
+    private void EnableChoices(bool enabled)
     {
-        player1Score = 0;
-        player2Score = 0;
-        currentRound = 1;
-        ResetRoundForNext();
+        if (buttonsRoot != null)
+            buttonsRoot.SetActive(enabled);
+    }
+
+    private void SetText(string msg, string round)
+    {
+        if (resultText) resultText.text = msg;
+        if (roundText) roundText.text = round;
     }
 }
